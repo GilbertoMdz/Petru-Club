@@ -31,23 +31,27 @@ const LoginScreen: React.FC<LoginProps> = ({ onSuccess, onBack }) => {
   return (
     <section
       className="min-h-screen relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-yellow-400 via-yellow-500 to-orange-400"
-      style={{ padding: "calc(env(safe-area-inset-top,0px) + 16px) 0 calc(env(safe-area-inset-bottom,0px) + 24px)" }}
+      style={{
+        padding: "calc(env(safe-area-inset-top,0px) + 16px) 0 calc(env(safe-area-inset-bottom,0px) + 24px)",
+      }}
     >
-      {/* decor */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-20 -left-16 w-80 h-80 rounded-full bg-black/10 blur-3xl" />
-        <div className="absolute -bottom-24 -right-16 w-96 h-96 rounded-full bg-white/25 blur-3xl" />
+      {/* Animated Background (igual que en Hero) */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-black rounded-full animate-pulse" />
+        <div className="absolute top-40 right-32 w-24 h-24 bg-white rounded-full animate-bounce" />
+        <div className="absolute bottom-32 left-1/3 w-20 h-20 bg-black rounded-full animate-ping" />
+        <div className="absolute bottom-20 right-20 w-28 h-28 bg-white rounded-full animate-pulse" />
       </div>
 
-      {/* contenido */}
+      {/* Contenido */}
       <div className="relative z-10 w-full max-w-md px-6">
-        {/* Header: solo Volver */}
+        {/* Header: Volver */}
         <div className="flex items-center justify-start mb-6">
           <button
             onClick={onBack}
             className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 
                        border border-black/10 text-black/70 hover:bg-black/5 
-                       transition text-sm"
+                       transition text-sm bg-white/40 backdrop-blur-sm"
           >
             <ArrowLeft className="w-4 h-4" />
             Volver

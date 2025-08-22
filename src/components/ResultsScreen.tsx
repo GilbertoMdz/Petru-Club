@@ -17,14 +17,14 @@ interface ResultsScreenProps {
   onRestart: () => void;
 }
 
-const ResultsScreen: React.FC<ResultsScreenProps> = ({ answers, onRestart }) => {
+const ResultsScreen: React.FC<ResultsScreenProps> = ({ onRestart }) => {
   // Mock products based on answers
   const products: Product[] = [
     {
       id: '1',
       name: 'Premium Nutrition Adult',
       brand: 'NutriPet Pro',
-      image: 'https://images.pexels.com/photos/7324014/pexels-photo-7324014.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
+      image: 'https://images.pexels.com/photos/4432260/pexels-photo-4432260.jpeg',
       rating: 4.9,
       price: '$42.99',
       features: ['Sin granos', 'Proteína real', 'Omega 3 & 6'],
@@ -34,7 +34,7 @@ const ResultsScreen: React.FC<ResultsScreenProps> = ({ answers, onRestart }) => 
       id: '2',
       name: 'Natural Balance Formula',
       brand: 'PurePet',
-      image: 'https://images.pexels.com/photos/7324013/pexels-photo-7324013.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
+      image: 'https://images.pexels.com/photos/4432260/pexels-photo-4432260.jpeg',
       rating: 4.7,
       price: '$38.50',
       features: ['Ingredientes naturales', 'Fácil digestión', 'Vitaminas esenciales'],
@@ -44,7 +44,7 @@ const ResultsScreen: React.FC<ResultsScreenProps> = ({ answers, onRestart }) => 
       id: '3',
       name: 'Active Life Complete',
       brand: 'VitalPet',
-      image: 'https://images.pexels.com/photos/7324012/pexels-photo-7324012.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
+      image: 'https://images.pexels.com/photos/4432260/pexels-photo-4432260.jpeg',
       rating: 4.8,
       price: '$45.25',
       features: ['Alto en proteína', 'Para mascotas activas', 'Antioxidantes'],
@@ -150,7 +150,7 @@ const ResultsScreen: React.FC<ResultsScreenProps> = ({ answers, onRestart }) => 
             className="inline-flex items-center px-8 py-4 border-2 border-black text-black font-medium rounded-2xl hover:bg-black hover:text-white transition-all duration-300"
           >
             <Heart size={20} className="mr-2" strokeWidth={1.5} />
-            Realizar nuevo análisis
+            Volver al inicio
           </button>
         </div>
       </div>

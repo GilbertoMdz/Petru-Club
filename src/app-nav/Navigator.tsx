@@ -67,11 +67,11 @@ export default function Navigator() {
   // -------- Rutas sin footer (onboarding / auth / quiz / results / petAdd) --------
   if (screen === "hero")
     return <Hero onLogin={() => go("login")} onRegister={() => go("register")} />;
-  
+
   if (screen === "subscriptions") {
-  return withFooter(<SubscriptionPage />, "home"); 
-  // puedes usar "home" como tab activo o el que prefieras
-}
+    return withFooter(<SubscriptionPage />, "home");
+    // puedes usar "home" como tab activo o el que prefieras
+  }
 
   if (screen === "login")
     return <LoginScreen onSuccess={() => go("home")} onBack={() => back()} />;
@@ -122,14 +122,14 @@ export default function Navigator() {
         onGoToSubscribe={() => go("subscriptions")}
         onGoToOrders={() => go("cart")}
         onOpenOffer={(id) => console.log("open offer", id)}
-        
+
       />,
       "home"
     );
   }
-if (screen === "products") {
-  return withFooter(<ProductGrid />, "home"); // usa "home" para no resaltar la pestaña de cupones
-}
+  if (screen === "products") {
+    return withFooter(<ProductGrid />, "home"); // usa "home" para no resaltar la pestaña de cupones
+  }
   if (screen === "coupons") {
     return withFooter(
       <CouponsScreen
@@ -180,7 +180,7 @@ if (screen === "products") {
         onManagePets={() => go("pets")}
         onOrders={() => go("cart")}
         onCoupons={() => go("coupons")}
-        onFavorites={() => console.log("favoritos")}
+        onSubscriptions={() => go("subscriptions")}     // ← NUEVO
         onAddresses={() => console.log("direcciones")}
         onPayments={() => console.log("pagos")}
         onNotifications={() => console.log("notificaciones")}

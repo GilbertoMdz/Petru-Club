@@ -13,6 +13,7 @@ import {
   Globe,
   ChevronRight,
   BadgePercent,
+  Gem,
   Settings,
 } from "lucide-react";
 
@@ -31,8 +32,7 @@ interface ProfileScreenProps {
   onManagePets?: () => void;
   onOrders?: () => void;
   onCoupons?: () => void;
-  onFavorites?: () => void;
-
+  onSubscriptions?: () => void
   // ajustes
   onAddresses?: () => void;
   onPayments?: () => void;
@@ -54,6 +54,8 @@ const ProfileScreen: React.FC<ProfileScreenProps> = ({
   onManagePets,
   onOrders,
   onCoupons,
+  onSubscriptions,
+
   onAddresses,
   onPayments,
   onNotifications,
@@ -199,6 +201,23 @@ const ProfileScreen: React.FC<ProfileScreenProps> = ({
             <p className="text-xs text-gray-600">Promos y recompensas</p>
           </div>
         </button>
+
+        <button
+          onClick={onSubscriptions}
+          className="group rounded-3xl border border-gray-100 bg-white shadow-[0_8px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_10px_28px_rgba(0,0,0,0.08)] transition p-4 flex items-center gap-3"
+        >
+          <div className="w-10 h-10 rounded-2xl bg-yellow-400 text-black flex items-center justify-center shadow">
+            <Gem className="w-5 h-5" />
+          </div>
+          <div className="flex-1 text-left">
+            <div className="flex items-center justify-between">
+              <h3 className="font-semibold text-black">Suscripciones</h3>
+              <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-black" />
+            </div>
+            <p className="text-xs text-gray-600">Planes y pagos recurrentes</p>
+          </div>
+        </button>
+
       </div>
 
       {/* Info cards */}

@@ -115,7 +115,7 @@ const CarouselWide: React.FC<CarouselWideProps> = ({
                 className="
                   relative w-full overflow-hidden rounded-3xl
                   border border-gray-100 shadow-[0_8px_24px_rgba(0,0,0,0.08)]
-                  h-48 md:h-58
+                  h-48 md:h-5
                 "
               >
                 {/* imagen */}

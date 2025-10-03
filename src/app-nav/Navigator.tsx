@@ -5,6 +5,7 @@ import type { QuizAnswers } from "../types";
 import { quizSteps } from "../data/questions";
 import SubscriptionPage from "../components/SubscriptionPage";
 import ProductGrid from "../components/ProductGrid"; // ⬅️ importa tu grid
+import PetsCarouselScreen from "../components/PetsCarouselScreen"; // arriba junto a tus imports
 
 import Hero from "../components/Hero";
 import LoginScreen from "../components/LoginScreen";
@@ -16,7 +17,7 @@ import ResultsScreen from "../components/ResultsScreen";
 import FooterNav from "../components/FooterNav";
 // Pantallas visuales
 import ProfileScreen from "../components/ProfileScreen";
-import PetsScreen, { type Pet } from "../components/PetsScreen";
+import { type Pet } from "../components/PetsScreen";
 import CartScreen from "../components/CartScreen";
 import CouponsScreen from "../components/CouponsScreen";
 // Wizard para alta de mascota
@@ -154,22 +155,18 @@ export default function Navigator() {
     );
   }
 
-  if (screen === "pets") {
-    return withFooter(
-      <PetsScreen
-        pets={pets}
-        onBack={() => go("home")}
-        onAddPet={() => go("petAdd")}
-        onOpenPet={(id) => console.log("Abrir mascota", id)}
-        onEditPet={(id) => console.log("Editar mascota", id)}
-        onDeletePet={(id) =>
-          setPets(prev => prev.filter(p => p.id !== id))
-        }
-        onManagePlan={(id) => console.log("Gestionar plan", id)}
-      />,
-      "pets"
-    );
-  }
+if (screen === "pets") {
+  return withFooter(
+    <PetsCarouselScreen
+      pets={pets}
+      onBack={() => go("home")}
+      onAddPet={() => go("petAdd")}
+      onOpenPet={(id) => console.log("Abrir mascota", id)}
+    />,
+    "pets"
+  );
+}
+
 
   if (screen === "profile") {
     return withFooter(

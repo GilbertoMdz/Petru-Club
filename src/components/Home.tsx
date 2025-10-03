@@ -28,7 +28,7 @@ const Home: React.FC<HomeProps> = ({
       image:
         "https://images.pexels.com/photos/7210729/pexels-photo-7210729.jpeg?auto=compress&cs=tinysrgb&w=1200",
       badge: "⭐ Más vendido",
-      cta: "Comprar ahora",
+      cta: "Ver",
       onClick: onGoToQuiz,
     },
     {
@@ -38,7 +38,7 @@ const Home: React.FC<HomeProps> = ({
       image:
         "https://images.pexels.com/photos/5749791/pexels-photo-5749791.jpeg?auto=compress&cs=tinysrgb&w=1200",
       badge: "-20%",
-      cta: "Ver ahora",
+      cta: "Ver",
       onClick: onGoToExplore,
     },
     {
@@ -48,7 +48,7 @@ const Home: React.FC<HomeProps> = ({
       image:
         "https://images.pexels.com/photos/5731865/pexels-photo-5731865.jpeg?auto=compress&cs=tinysrgb&w=1200",
       badge: "Nuevo",
-      cta: "ahora",
+      cta: "Ver",
       onClick: onGoToSubscribe,
     },
     {
@@ -58,7 +58,7 @@ const Home: React.FC<HomeProps> = ({
       image:
         "https://images.pexels.com/photos/7210654/pexels-photo-7210654.jpeg?auto=compress&cs=tinysrgb&w=1200",
       badge: "⭐ Favorito",
-      cta: "ahora",
+      cta: "Ver",
       onClick: onGoToSubscribe,
     },
   ];

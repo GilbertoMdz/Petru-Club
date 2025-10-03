@@ -26,7 +26,7 @@ const Hero: React.FC<HeroProps> = ({ onLogin, onRegister }) => {
         <div className="max-w-4xl mx-auto">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-black/10 backdrop-blur-sm text-black font-semibold mb-8">
             <span className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse" />
-            Bienvenido a Petru Club
+            Bienvenido a Mascotas Club
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-black mb-2 leading-tight">

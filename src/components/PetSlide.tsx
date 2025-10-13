@@ -1,7 +1,6 @@
 // src/components/PetSlide.tsx
 import React, { useMemo } from 'react';
-import { MapPin, MoreVertical, Heart, Calendar, Scale, User } from 'lucide-react';
-import Pet3D from './Pet3D';
+import { MapPin, Heart, Calendar, Scale, User } from 'lucide-react';
 import type { Pet } from '../components/PetsScreen'; // reutilizamos tu tipo
 
 // --- utilidades para “derivar” datos desde tu Pet actual ---
